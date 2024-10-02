@@ -70,15 +70,15 @@ npm run dev
 
 Ensure your Express backend is running and properly configured to handle authentication and title management.
 
-API Endpoints
+**API Endpoints**
 
-User Authentication:
+_User Authentication:_
 
 POST /api/auth/register: Register a new user.
 
 POST /api/auth/login: Authenticate an existing user.
 
-Title Management:
+_Title Management:_
 
 GET /api/titles: Retrieve a list of titles.
 
@@ -86,7 +86,8 @@ POST /api/titles: Create a new title.
 
 DELETE /api/titles/:id: Delete a title by ID.
 
-Testing
+_Testing_
+
 Unit tests are included for all components and functions. To run the tests, use the following
 
 ```bash
