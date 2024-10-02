@@ -1,5 +1,5 @@
 import { LogoutCurve, Moon, Sun1 } from "iconsax-react";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { accessToken } from "../assets/constant";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../components/context/authContext";

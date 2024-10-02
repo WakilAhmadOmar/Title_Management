@@ -1,50 +1,94 @@
-# React + TypeScript + Vite
+# Title Management Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A frontend web application that interacts with an Express backend to manage user authentication and allow users to create and read titles suggested by users. The application integrates MetaMask for cryptocurrency wallet functionality.
 
-Currently, two official plugins are available:
+## Objective
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Develop a frontend application that allows users to:
 
-## Expanding the ESLint configuration
+- Authenticate using JWT (JSON Web Tokens).
+- Manage titles: view, add, and delete titles.
+- Connect their MetaMask wallet to interact with the platform.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Features
 
-- Configure the top-level `parserOptions` property like this:
+- **User Authentication**:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-});
+  - Login and registration pages.
+  - Secure user sessions managed with JWT.
+  - Error handling for authentication processes.
+
+- **Title Management**:
+
+  - Dashboard for authenticated users.
+  - View a list of titles.
+  - Add new titles with relevant details when the user connected their wallet.
+  - Delete existing titles when the user connected their wallet.
+
+- **MetaMask Integration**:
+  - Connect users’ cryptocurrency wallets.
+  - Display the connected wallet address on the dashboard.
+  - Restrict title management functionalities to connected wallet users.
+
+## Tech Stack
+
+- **Frontend Framework**: React + Vite
+- **State Management**: Context API
+- **Styling**: Tailwind CSS
+- **Testing**: Jest, React Testing Library
+- **MetaMask Integration**: Ethers.js
+
+## Getting Started
+
+To set up and run the application locally, follow these steps:
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/your-username/title-management-app.git
+   ```
+
+````
+
+2. **Navigate into the project directory**:
+```bash
+cd title-management-app
+````
+
+3. \*_Install dependencies:_
+
+```bach
+npm install
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+4. **Run the application:**
 
-```js
-// eslint.config.js
-import react from "eslint-plugin-react";
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: "18.3" } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs["jsx-runtime"].rules,
-  },
-});
+```bash
+npm run dev
 ```
+
+5. **Connect to the backend:**
+
+Ensure your Express backend is running and properly configured to handle authentication and title management.
+
+API Endpoints
+
+User Authentication:
+
+POST /api/auth/register: Register a new user.
+POST /api/auth/login: Authenticate an existing user.
+
+Title Management:
+
+GET /api/titles: Retrieve a list of titles.
+POST /api/titles: Create a new title.
+DELETE /api/titles/:id: Delete a title by ID.
+
+Testing
+Unit tests are included for all components and functions. To run the tests, use the following
+
+```bash
+npm test
+```
+
+Contributing
+Contributions are welcome! Please open an issue or submit a pull request.
