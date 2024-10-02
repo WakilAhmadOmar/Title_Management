@@ -15,7 +15,7 @@ const BottomTabBar = () => {
   };
 
   return (
-    <div className="fixed bottom-0 left-0 right-0   shadow-2xl z-30 dark:bg-dark-header transition-all duration-300 ease-linear">
+    <div className="fixed bottom-0 left-0 right-0 bg-gray-100  shadow-2xl z-30 dark:bg-dark-header transition-all duration-300 ease-linear">
       <div className="grid grid-cols-3 justify-around  max_width_app">
         {tabs.map((tab) => (
           <div key={tab.name} className="flex flex-col items-center">

@@ -96,3 +96,9 @@ npm test
 
 Contributing
 Contributions are welcome! Please open an issue or submit a pull request.
+
+![HomePage Screenshot](./src/assets/images/walletPage.png)
+
+![TitlePage Screenshot](./src/assets/images/titlePage.png)
+
+![SettingPage Screenshot](./src/assets/images/settingPage.png)

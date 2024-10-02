@@ -118,13 +118,13 @@ const WalletPage: React.FC = () => {
           handleClose={HandleCloseMessage}
         />
       )}
-      <div className="h-screen flex items-center">
+      <div className="h-screen grid pt-20 items-start overflow-y-auto pb-20">
         {walletAddress ? (
           <>
-            <p className="text-center font-normal text-sm pt-3 ">
+            <p className="text-center font-normal text-sm pt-3 dark:text-white">
               Your Balance
             </p>
-            <div className="flex justify-center items-center gap-2">
+            <div className="flex justify-center items-center gap-2  h-fit -mt-2">
               <p className="text-gray-500 text-xs font-light">
                 {" "}
                 {walletAddress?.slice(0, 10)}...
@@ -137,7 +137,7 @@ const WalletPage: React.FC = () => {
                 <Copy size={20} />
               </button>
             </div>
-            <h2 className="text-center font-bold text-3xl">
+            <h2 className="text-center font-bold text-3xl dark:text-white">
               $ {walletBalance}
             </h2>
             <div className="p-6">
@@ -146,38 +146,42 @@ const WalletPage: React.FC = () => {
                   <div className="w-9 h-9 rounded-full border  flex justify-center items-center cursor-pointer  hover:bg-blue-700  transition-all duration-300 ease-linear text-white bg-blue-500">
                     <ArrowUp size={16} className="rotate-45 transform" />
                   </div>
-                  <p className="font-light text-sm">Send</p>
+                  <p className="font-light text-sm dark:text-white">Send</p>
                 </div>
                 <div className="flex flex-col justify-center items-center">
                   <div className="w-9 h-9 rounded-full border  flex justify-center items-center cursor-pointer  hover:bg-blue-700  transition-all duration-300 ease-linear text-white bg-blue-500">
                     <ArrowDown size={16} />
                   </div>
-                  <p className="font-light text-sm">Resive</p>
+                  <p className="font-light text-sm dark:text-white">Resive</p>
                 </div>
                 <div className="flex flex-col justify-center items-center">
                   <div className="w-9 h-9 rounded-full border  flex justify-center items-center cursor-pointer  hover:bg-blue-700  transition-all duration-300 ease-linear text-white bg-blue-500">
                     <ArrowSwapHorizontal size={16} />
                   </div>
-                  <p className="font-light text-sm">Swap</p>
+                  <p className="font-light text-sm dark:text-white">Swap</p>
                 </div>
                 <div className="flex flex-col justify-center items-center">
                   <div className="w-9 h-9 rounded-full border  flex justify-center items-center cursor-pointer  hover:bg-blue-700  transition-all duration-300 ease-linear text-white bg-blue-500">
                     <More size={16} />
                   </div>
-                  <p className="font-light text-sm">More</p>
+                  <p className="font-light text-sm dark:text-white">More</p>
                 </div>
               </div>
               <div className="flex justify-between items-center">
-                <h2 className="font-bold text-xl text-gray-500">Tokens</h2>
-                <p className="font-normal text-sm text-gray-400">View all</p>
+                <h2 className="font-bold text-xl text-gray-500 dark:text-white">
+                  Tokens
+                </h2>
+                <p className="font-normal text-sm text-gray-400 dark:text-gray-300">
+                  View all
+                </p>
               </div>
               <ul>
                 {tokenBalances.map((token: any) => (
                   <div
                     key={token.symbol}
-                    className="grid grid-cols-[4rem_auto] bg-white mt-2 py-3 px-5 rounded-2xl"
+                    className="grid grid-cols-[4rem_auto] bg-white mt-2 py-3 px-5 rounded-2xl dark:bg-dark-inputBgC"
                   >
-                    <div>
+                    <div className="w-[44px] h-[44px] rounded-full bg-white flex justify-center items-center">
                       <img
                         src={token.image}
                         style={{ width: "40px", height: "40px" }}
@@ -185,16 +189,16 @@ const WalletPage: React.FC = () => {
                     </div>
                     <div className="flex justify-between items-center">
                       <div className="grid">
-                        <p className="font-semibold text-lg text-gray-700">
+                        <p className="font-semibold text-lg text-gray-700 dark:text-white">
                           {" "}
                           {token.name}
                         </p>
-                        <p className="font-normal text-sm text-gray-400">
+                        <p className="font-normal text-sm text-gray-400 dark:text-gray-300">
                           {token.symbol}
                         </p>
                       </div>
                       <div>
-                        <p className="font-semibold text-lg text-gray-700">
+                        <p className="font-semibold text-lg text-gray-700 dark:text-white">
                           ${token.balance}
                         </p>
                       </div>
