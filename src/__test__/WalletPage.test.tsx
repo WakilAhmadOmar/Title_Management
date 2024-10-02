@@ -4,17 +4,6 @@ import { AuthContext } from "../components/context/authContext";
 import { ethers } from "ethers";
 import "@testing-library/jest-dom";
 
-// Mock token list data
-const mockTokenList = [
-  {
-    address: "0x123",
-    symbol: "DAI",
-    name: "Dai Stablecoin",
-    icon: "dai-icon.png",
-    decimals: 18,
-  },
-];
-
 // Mock context values
 const mockContextValues = {
   walletAddress: "",

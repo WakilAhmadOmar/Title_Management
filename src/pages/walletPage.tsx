@@ -73,6 +73,7 @@ const WalletPage: React.FC = () => {
   useEffect(() => {
     // Listen for account changes in MetaMask
     if (window?.ethereum) {
+      //@ts-ignore
       window?.ethereum?.on("accountsChanged", (accounts: string[]) => {
         setWalletAddress(accounts[0]);
       });

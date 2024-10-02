@@ -1,5 +1,3 @@
-import React from "react";
-
 import { Routes, Route } from "react-router-dom";
 import WalletPage from "../pages/walletPage";
 import Messages from "../pages/messages";

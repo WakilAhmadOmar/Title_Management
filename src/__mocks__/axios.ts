@@ -1,6 +1,5 @@
 // src/__mocks__/axios.ts
 import { jest } from "@jest/globals";
-import axios from "axios";
 
 const mockAxios: any = jest.createMockFromModule("axios");
 
