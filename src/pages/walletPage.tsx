@@ -118,7 +118,7 @@ const WalletPage: React.FC = () => {
           handleClose={HandleCloseMessage}
         />
       )}
-      <div className="h-screen grid pt-20 items-start overflow-y-auto pb-20">
+      <div className="h-screen grid pt-20 items-center overflow-y-auto pb-20">
         {walletAddress ? (
           <>
             <p className="text-center font-normal text-sm pt-3 dark:text-white">
