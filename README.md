@@ -43,18 +43,18 @@ Develop a frontend application that allows users to:
 To set up and run the application locally, follow these steps:
 
 1. **Clone the repository**:
+
    ```bash
    git clone https://github.com/your-username/title-management-app.git
    ```
 
-````
+2. **Navigate into the project directory**
 
-2. **Navigate into the project directory**:
 ```bash
-cd title-management-app
-````
+cd Title-Management
+```
 
-3. \*_Install dependencies:_
+3. **Install dependencies:**
 
 ```bach
 npm install
@@ -75,12 +75,15 @@ API Endpoints
 User Authentication:
 
 POST /api/auth/register: Register a new user.
+
 POST /api/auth/login: Authenticate an existing user.
 
 Title Management:
 
 GET /api/titles: Retrieve a list of titles.
+
 POST /api/titles: Create a new title.
+
 DELETE /api/titles/:id: Delete a title by ID.
 
 Testing
